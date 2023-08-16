@@ -3,6 +3,11 @@
 Global application provides valuable information about countries and cities. it uses different APIs for fetching data.
 This application has been developed using Angular v(16.1.0)
 
+
+visit the project live in [here](https://aliherawi7.github.io/Global/)
+or here 
+[https://aliherawi7.github.io/Global/](https://aliherawi7.github.io/Global/)
+
 ![home page](./src/assets/images/screenshot1.png)
 ![countries page](./src/assets/images/screenshot2.png)
 
