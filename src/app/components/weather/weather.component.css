@@ -13,10 +13,6 @@
 }
 
 
-.forecast-container .forecast.today .forecast-header {
-    *zoom: 1;
-}
-
 .forecast-container .forecast.today .forecast-header:after {
     content: " ";
     clear: both;
