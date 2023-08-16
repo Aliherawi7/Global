@@ -1,7 +1,7 @@
 # Global
 
-Global application provides valuable information about countires and cities. it uses diffrenet API for fetching data.
-This application has been developed using Angular js v(16.1.0)
+Global application provides valuable information about countries and cities. it uses different APIs for fetching data.
+This application has been developed using Angular v(16.1.0)
 
 ![home page](./src/assets/images/screenshot1.png)
 ![countries page](./src/assets/images/screenshot2.png)
