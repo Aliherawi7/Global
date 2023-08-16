@@ -19,21 +19,21 @@ const routes: Routes = [
   {
     path: "countries",
     component: CountriesComponent,
-    title: "Global countries",
+    title: "Global countries page",
     pathMatch: "full",
     // canActivate: [authGuard]
   },
   {
     path: "countries/:name",
     component: CountryComponent,
-    title: "Global",
+    title: "Global country page",
     pathMatch: "full",
     // canActivate: [authGuard]
   },
   {
     path: "cities",
     component: CitiesComponent,
-    title: "Hello World: :name",
+    title: "Global cities page",
     pathMatch: "full",
     // canActivate: [authGuard]
   },
