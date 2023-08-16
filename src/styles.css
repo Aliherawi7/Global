@@ -1,1 +1,209 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    word-break: break-word;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+/* scrollbar styles */
+*::-webkit-scrollbar-track {
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+*::-webkit-scrollbar {
+    visibility: hidden;
+    width: 8px;
+    height: 0;
+}
+
+*::-webkit-scrollbar-thumb {
+    opacity: 0;
+    background-color: var(--gen-color);
+    border-radius: 10px;
+}
+
+
+/* themes colors */
+
+
+/* Dark or Light Themes */
+.theme-pink-blue-gray {
+    --gen-color: #e91e63;
+    --gen-bg-color-hover: #4242426e;
+    --gen-main-bg: #424242c9;
+    --text-color: #fff;
+    background: linear-gradient(266deg, #280025, #260706, #2a3656);
+    --gen-container-bg: #424242c9;
+    --gen-border-color: #dddddd41;
+    --card-bg: #0a0a0ad1;
+}
+
+.theme-purple-light {
+    --gen-color: #e91e63;
+    --gen-bg-color-hover: #4242426e;
+    --gen-main-bg: #fff;
+    --text-color: #000;
+    --gen-container-bg: #fafafa;
+    --gen-border-color: #dddddd91;
+    --card-bg: #ffffffe3;
+}
+
+/* box shadow */
+
+.box_shadow {
+    box-shadow: 0 1px 1px 1px var(--gen-bg-color-hover);
+}
+
+.box {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px #6c878733;
+}
+
+
+
+/* icon size */
+
+.icon {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+
+}
+
+.large_size {
+    font-size: 1.6rem;
+}
+
+.small_size {
+    font-size: 1rem;
+}
+
+/* darkmode slide toggle styles */
+.mdc-form-field {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+}
+
+.mat-mdc-slide-toggle .mdc-switch:enabled+.mdc-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.custome_darkmode {
+    color: var(--gen-color);
+    width: 100%;
+}
+
+
+.theme-purple-light .mat-mdc-select-panel {
+    background: #fff !important;
+    color: var(--text-color);
+}
+
+.theme-pink-blue-gray .mat-mdc-select-panel,
+.theme-pink-blue-gray .mat-mdc-form-field-input-control {
+    background: #424242c9 !important;
+    color: #fff !important;
+}
+
+.mat-mdc-form-field:not(.mat-form-field-no-animations) .mdc-text-field__input {
+    transition: opacity 150ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-pink-blue-gray .mat-mdc-form-field-input-control::placeholder {
+    color: #fff !important;
+}
+
+
+.mat-mdc-option .mdc-list-item__primary-text {
+    color: var(--text-color) !important;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled),
+.mat-mdc-autocomplete-trigger,
+.mat-mdc-input-element,
+.ng-tns-c1205077789-0,
+.ng-pristine,
+.ng-valid,
+.mat-mdc-form-field-input-control,
+.mdc-text-field__input,
+.cdk-text-field-autofill-monitored,
+.ng-touched {
+    background: var(--gen-main-bg) !important;
+}
+
+
+.mat-mdc-form-field-flex {
+    display: inline-flex;
+    align-items: baseline;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* .mat-mdc-option {
+    font-size: 14px !important;
+} */
+
+.mat-mdc-form-field-subscript-wrapper {
+    display: none;
+}
+
+
+/* search bpox */
+
+.search_box {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.search_box button {
+    display: flex;
+    align-items: center;
+    outline: none;
+    color: var(--text-color);
+    background: var(--gen-color);
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 56px;
+}
+
+
+.mat-mdc-form-field {
+    width: 350px;
+}
+
+.mat-mdc-progress-spinner .mdc-circular-progress__determinate-circle,
+.mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-circle-graphic {
+    stroke: var(--gen-color) !important;
+}

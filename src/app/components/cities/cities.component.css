@@ -1,0 +1,27 @@
+.cities {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.city_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.city_details {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.city_details .title {
+    display: inline-block;
+    width: 130px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}

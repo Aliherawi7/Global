@@ -1,0 +1,57 @@
+<div class="cities">
+    <div class="search_box">
+        <mat-form-field class="example-full-width">
+            <mat-label>search city</mat-label>
+            <input matInput placeholder="Ex. London" [(ngModel)]="searchInput" (keyup)="searchInputChange($event)">
+        </mat-form-field>
+        <button type="submit" (click)="searchCity()">
+            <mat-icon class="icon small_size" fontIcon="search"></mat-icon>
+            search
+        </button>
+    </div>
+    <div class="city_container">
+        <h2 *ngIf="!searchInput">find your target city</h2>
+        <h2 *ngIf="notFound">
+            <mat-icon>warning</mat-icon>
+            not found
+        </h2>
+        <mat-progress-spinner *ngIf="isNotLoaded" class="example-margin" color="red" mode="indeterminate">
+        </mat-progress-spinner>
+        <div class="city_details box" *ngIf="city">
+            <div class="details">
+                <h1>{{city.name}}</h1>
+                <table class="mapped_details">
+                    <tbody>
+                        <tr>
+                            <td class="title">Name</td>
+                            <td class="value">{{city.name}}</td>
+                        </tr>
+                        <tr>
+                            <td class="title">country</td>
+                            <td class="value">{{city.country}}</td>
+                        </tr>
+                        <tr>
+                            <td class="title">Is Capital City</td>
+                            <td class="value">{{city.is_capital}}</td>
+                        </tr>
+                        <tr>
+                            <td class="title">latitude</td>
+                            <td class="value">{{city.latitude}}</td>
+                        </tr>
+                        <tr>
+                            <td class="title">longitude</td>
+                            <td class="value">{{city.longitude}}</td>
+                        </tr>
+                        <tr>
+                            <td class="title">Population</td>
+                            <td class="value">{{city.population}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <app-weather *ngIf="weather" [name]="city.name" [maxTemp]="weather.max_temp"
+                [windSpeed]="weather.wind_speed" [humidity]="weather.humidity">
+            </app-weather>
+        </div>
+    </div>
+</div>

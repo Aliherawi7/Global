@@ -1,0 +1,61 @@
+.home_container {
+    background-image: url("../../../assets/images/map.png");
+    background-size: cover;
+    height: 96vh;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    width: 100%;
+    gap: 10px;
+    background-color: var(--card-bg);
+    padding: 16px;
+}
+
+.box {
+    margin: 0 10px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    height: max-content;
+    width: 300px;
+}
+
+.map {
+    height: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+
+
+.statistics_table th:first-child {
+    width: 30px;
+}
+
+.statistics_table th:nth-child(2) {
+    width: 120px;
+}
+
+.statistics_table th,
+.statistics_table td {
+    text-align: left;
+}
+
+
+canvas {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #1f1d2c;
+    padding: 10px;
+    box-shadow: 1px 1px 23px 2px #000;
+    height: 280px !important;
+    width: 500px !important;
+    object-fit: contain;
+    color: #fff !important;
+}

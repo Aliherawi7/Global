@@ -1,0 +1,80 @@
+<div class="country_details">
+    <!-- <img src="../../../assets/images/country-page-bg.jpg" alt="" class="background_image"> -->
+    <div class="details_container">
+        <h1>{{country.commonName}}</h1>
+        <table class="mapped_details">
+            <tbody>
+                <tr>
+                    <td class="title">Name</td>
+                    <td class="value">{{country.commonName}}</td>
+                </tr>
+                <tr>
+                    <td class="title">Official name</td>
+                    <td class="value">{{country.officialName}}</td>
+                </tr>
+                <tr>
+                    <td class="title">Capital City</td>
+                    <td class="value">{{country.capital}}</td>
+                </tr>
+                <tr>
+                    <td class="title">Area</td>
+                    <td class="value">{{country.area}} km<sup>2</sup></td>
+                </tr>
+                <tr>
+                    <td class="title">Languages</td>
+                    <td class="value">{{country.languages}}</td>
+                </tr>
+                <tr>
+                    <td class="title">Currency</td>
+                    <td class="value">{{country.currencies}}</td>
+                </tr>
+                <tr>
+                    <td class="title">Continent</td>
+                    <td class="value">{{country.continents}}</td>
+                </tr>
+                <tr>
+                    <td class="title">Population</td>
+                    <td class="value">{{country.population}}</td>
+                </tr>
+                <tr>
+                    <td class="title">United Nation Member</td>
+                    <td class="value">{{country.unMember ? "Yes":"No"}}</td>
+                </tr>
+                <tr>
+                    <td class="title">timezones</td>
+                    <td class="value">{{country.timezones}}</td>
+                </tr>
+                <tr>
+                    <td class="title">Driving Side</td>
+                    <td class="value">{{country.drivingSide}}</td>
+                </tr>
+                <tr>
+                    <td class="title">Start Of week</td>
+                    <td class="value">{{country.startOfWeek}}</td>
+                </tr>
+                <tr>
+                    <td class="title">Flag descriptions</td>
+                    <td class="value">{{country.flags.alt}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="country_images">
+        <div class="flags">
+            <p>Flag:</p>
+            <img src={{country.flags.png}} (load)="isNotLoadedFlag=false" alt={{country.commonName}}>
+            <mat-progress-spinner *ngIf="isNotLoadedFlag" class="example-margin" color="#e91e63" mode="indeterminate">
+            </mat-progress-spinner>
+        </div>
+        <div class="maps">
+
+        </div>
+        <div class="army_cloth">
+            <p>Coat Of Arms:</p>
+            <img src={{country.coatOfArms.png}} (load)="isNotLoadedArm=false" class="arms_logo"
+                alt={{country.commonName}}>
+            <mat-progress-spinner *ngIf="isNotLoadedArm" class="example-margin" color="red" mode="indeterminate">
+            </mat-progress-spinner>
+        </div>
+    </div>
+</div>

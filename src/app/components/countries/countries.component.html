@@ -1,0 +1,43 @@
+<div class="countries">
+    <div class="search_box">
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+                <mat-label>search...</mat-label>
+                <input type="text" aria-label="Country name" matInput [formControl]="autoCompleteSearch"
+                    [matAutocomplete]="auto">
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions" [value]="option">
+                        {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </form>
+        <button type="submit">
+            <mat-icon class="icon small_size" fontIcon="search"></mat-icon>
+            search
+        </button>
+    </div>
+    <div class="filter_container">
+        <mat-form-field>
+            <mat-label>Continents</mat-label>
+            <mat-select [formControl]="continentsFormControl" (change)="onChange($event)" multiple>
+                <mat-select-trigger>
+                    {{continentsFormControl.value?.[0] || ''}}
+                    <span *ngIf="(continentsFormControl.value?.length || 0) > 1" class="example-additional-selection">
+                        (+{{(continentsFormControl.value?.length || 0) - 1}} {{continentsFormControl.value?.length === 2
+                        ? 'other' : 'others'}})
+                    </span>
+                </mat-select-trigger>
+                <mat-option *ngFor="let topping of continents" [value]="topping">{{topping}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <mat-progress-spinner *ngIf="!isLoaded" class="example-margin" color="red" mode="indeterminate">
+    </mat-progress-spinner>
+    <div class="cards_container" *ngIf="isLoaded">
+        <app-country-card *ngFor="let country of countries" [capital]="country.capital" [flag]="country.flag"
+            [population]="country.population" [continents]="country.continents"
+            [routerLink]="['/countries', country.commonName.toLowerCase()]" [name]="country.commonName">
+        </app-country-card>
+    </div>
+</div>

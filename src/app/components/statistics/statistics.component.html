@@ -1,0 +1,29 @@
+<div class="statistics">
+    <div class="top_most_populated box">
+        <h2>Top 5 most populated countries</h2>
+        <canvas baseChart [title]="'Top 5 densely populated countries'" [type]="'pie'" [datasets]="pieChartDatasets"
+            [labels]="pieChartLabels" [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+        </canvas>
+    </div>
+    <div class="top_most_populated box">
+        <h2>Top 5 most biggest countries</h2>
+        <canvas baseChart [labels]="doughnutChartLabels" [datasets]="doughnutChartDatasets"
+            [options]="doughnutChartOptions" [legend]="true" [type]="'doughnut'">
+        </canvas>
+    </div>
+
+    <!-- <div class="top_most_populated box">
+        <h2>Top 5 most biggest countries</h2>
+        <canvas baseChart [datasets]="polarAreaChartDatasets" [labels]="polarAreaChartLabels" [legend]="polarAreaLegend"
+            [options]="polarAreaOptions" [type]="'polarArea'">
+        </canvas>
+    </div> -->
+    <div class="top_most_populated box">
+        <h2>Independent And Dependent Countries</h2>
+        <canvas baseChart [title]="'Independent And Dependent Countries'" [type]="'pie'"
+            [datasets]="pieChartDatasetsForDependentAndIndependent" [labels]="pieChartLabelsForDependentAndIndependent"
+            [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+        </canvas>
+    </div>
+
+</div>

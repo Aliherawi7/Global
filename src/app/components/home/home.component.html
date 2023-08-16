@@ -1,0 +1,15 @@
+<div class="home_container ">
+    <div class="container">
+        <h1>Hello dear User <br />
+            Welcome to Global Application
+        </h1>
+
+
+        <mat-progress-spinner *ngIf="!weather" class="example-margin" color="#e91e63" mode="indeterminate">
+        </mat-progress-spinner>
+        <app-weather *ngIf="weather" [name]="weather.name" [maxTemp]="weather.max_temp" [windSpeed]="weather.wind_speed"
+            [humidity]="weather.humidity">
+        </app-weather>
+    </div>
+    <app-statistics></app-statistics>
+</div>

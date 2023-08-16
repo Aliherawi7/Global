@@ -1,0 +1,35 @@
+<nav class="  box-shadow">
+    <div class="brand_name">
+        <img src="../../../assets/images/logo.png" alt="">
+        Global
+    </div>
+    <ul class=" navabr_menu_container">
+        <li [routerLink]="['']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact: true}">
+            <mat-icon class=" icon small_size" fontIcon="home">
+            </mat-icon>
+            Home
+        </li>
+        <li [routerLink]="['countries']" routerLinkActive="router-link-active">
+            <mat-icon class="icon small_size" fontIcon="public"></mat-icon>
+            Countries
+        </li>
+        <li [routerLink]="['cities']" routerLinkActive="router-link-active">
+            <mat-icon class="icon small_size" fontIcon="location_on"></mat-icon>
+            Cities
+        </li>
+        <li [routerLink]="['quiz']" routerLinkActive="router-link-active">
+            <mat-icon class="icon small_size" fontIcon="help_outline"></mat-icon>
+            Quiz
+        </li>
+        <li [routerLink]="['about']" routerLinkActive="router-link-active">
+            <mat-icon class="icon small_size" fontIcon="flag"></mat-icon>
+            About
+        </li>
+    </ul>
+
+    <mat-slide-toggle class="custome_darkmode" [checked]="isDark" (change)="changeDarkMode()">
+        <mat-icon class="icon small_size" fontIcon="brightness_2">
+        </mat-icon>
+        Dark mode
+    </mat-slide-toggle>
+</nav>
