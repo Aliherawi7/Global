@@ -12,21 +12,21 @@ const routes: Routes = [
   {
     path: "",
     component: HomeComponent,
-    title: "Hello World",
+    title: "Global",
     pathMatch: "full",
     // canActivate: [authGuard]
   },
   {
     path: "countries",
     component: CountriesComponent,
-    title: "Hello World: countries",
+    title: "Global countries",
     pathMatch: "full",
     // canActivate: [authGuard]
   },
   {
     path: "countries/:name",
     component: CountryComponent,
-    title: "{{name}}",
+    title: "Global",
     pathMatch: "full",
     // canActivate: [authGuard]
   },
