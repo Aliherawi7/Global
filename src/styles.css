@@ -207,3 +207,22 @@ ul {
 .mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-circle-graphic {
     stroke: var(--gen-color) !important;
 }
+
+
+/* animations */
+.fade_in {
+    animation-name: fade-in;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(0.55, 0.01, 0.12, 0.97);
+}
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

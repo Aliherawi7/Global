@@ -1,0 +1,10 @@
+.quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.quiz h1 {
+    font-size: 5rem;
+}
