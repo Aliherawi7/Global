@@ -48,18 +48,18 @@ ul {
 
 /* Dark or Light Themes */
 .theme-pink-blue-gray {
-    --gen-color: #e91e63;
+    --gen-color: #2196F3;
     --gen-bg-color-hover: #4242426e;
     --gen-main-bg: #424242c9;
     --text-color: #fff;
-    background: linear-gradient(266deg, #280025, #260706, #2a3656);
+    background: linear-gradient(145deg, #000000fa, #2196F3, #000000fa);
     --gen-container-bg: #424242c9;
     --gen-border-color: #dddddd41;
     --card-bg: #0a0a0ad1;
 }
 
 .theme-purple-light {
-    --gen-color: #e91e63;
+    --gen-color: #2196F3;
     --gen-bg-color-hover: #4242426e;
     --gen-main-bg: #fff;
     --text-color: #000;
